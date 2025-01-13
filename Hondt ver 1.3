@@ -1,0 +1,36 @@
+from ti_system import *
+class hondt:
+  def mode():
+    modelist = ["1:hondt","2:lague","3:mlague","4:custom"]
+    print("Select mode:")
+    print(modelist)
+    global custom
+    global mode
+    while True:
+      global x
+      x = get_key()
+      if click("esc") == True or click("p") == True:
+        print("The mode wasn't selected")
+        break
+      elif click("1") == True:
+        mode = "hondt"
+        break
+      elif click("2") == True:
+        mode = "lague"
+        break
+      elif click("3") == True:
+        mode = "mlague"
+        break
+      elif click("4") == True:
+        i = 0
+        while True:
+          j = i+1
+          print("Quocient",j,"is")
+          buffer = input()
+          if buffer == "end":
+            break
+          if i == 0:
+            custom = []
+          custom.append(int(buffer))
+          i = i + 1
+        break
